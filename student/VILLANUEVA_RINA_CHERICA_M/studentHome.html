@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALMAtrack - Student Home</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <!-- Background -->
+    <div class="background"></div>
+    <div class="overlay"></div>
+
+    <!-- Sidebar Toggle -->
+    <button class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <img src="../../assets/vcsms.jpg" alt="VC Logo" class="sidebar-logo">
+        </div>
+        <ul class="sidebar-menu">
+            <li class="menu-item">
+                <a href="studentProfile.html">
+                    <img src="../../assets/PN.jpg" alt="Profile" class="menu-icon">
+                    <span>Profile</span>
+                </a>
+            </li>
+            <li class="menu-item active">
+                <a href="studentHome.html">
+                    <img src="../../assets/HN.jpg" alt="Home" class="menu-icon">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="studentCalendar.html">
+                    <img src="../../assets/CN.jpg" alt="Calendar" class="menu-icon">
+                    <span>Calendar</span>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="studentSettings.html">
+                    <img src="../../assets/SN.jpg" alt="Settings" class="menu-icon">
+                    <span>Settings</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content" id="mainContent">
+        <header class="top-header">
+           
+            <div class="header-actions">
+                
+                <p> - </p>
+                
+            </div>
+        </header>
+
+        <div class="page-title">
+            <h1>
+                <span class="valma">VALMA</span><span class="track">track</span>
+                <img src="../../assets/os.jpg" alt="Fire" class="fire-icon" id="streakIcon">
+                <div class="streak-badge">
+                    <span class="streak-number" id="streakNumber">0</span>
+                    <span class="streak-text">day<br>streak</span>
+                </div>
+            </h1>
+        </div>
+
+        <div class="dashboard-grid">
+            <!-- Left Section -->
+            <div class="left-panel">
+                <!-- Status Cards Row 1 -->
+                <div class="status-row">
+                    <div class="status-card on-time">
+                        <div class="status-number" id="onTimeCount">0</div>
+                        <div class="status-label">On Time</div>
+                    </div>
+                    <div class="status-card absent">
+                        <div class="status-number" id="absentCount">0</div>
+                        <div class="status-label">Absent</div>
+                    </div>
+                </div>
+
+                <!-- Status Cards Row 2 -->
+                <div class="status-row">
+                    <div class="status-card excused">
+                        <div class="status-number" id="excusedCount">0</div>
+                        <div class="status-label">Excused</div>
+                    </div>
+                    <div class="status-card late">
+                        <div class="status-number" id="lateCount">0</div>
+                        <div class="status-label">Late</div>
+                    </div>
+                </div>
+
+                <!-- Summary Box -->
+                <div class="summary-box">
+                    <div class="time-summary">
+                        <span class="time-number">Week 1</span>
+                        <span class="time-unit"></span>
+                        <span class="time-unit">December</span>
+                        <span class="time-unit">2025</span>
+                    </div>
+
+                    <div class="week-status">
+                        <h3>This week's status</h3>
+                        <div class="week-days">
+                            <div class="day">
+                                <span>Mon</span>
+                                <div class="day-indicator"></div>
+                            </div>
+                            <div class="day">
+                                <span>Tue</span>
+                                <div class="day-indicator"></div>
+                            </div>
+                            <div class="day">
+                                <span>Wed</span>
+                                <div class="day-indicator"></div>
+                            </div>
+                            <div class="day">
+                                <span>Thur</span>
+                                <div class="day-indicator"></div>
+                            </div>
+                            <div class="day">
+                                <span>Fri</span>
+                                <div class="day-indicator"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="status-legend">
+                        <div class="legend-item">
+                            <span class="legend-dot on-time"></span>
+                            <span>On time</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-dot absent"></span>
+                            <span>Absent</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-dot excused"></span>
+                            <span>Excused</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-dot late"></span>
+                            <span>Late</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Section -->
+            <div class="right-panel">
+                <div class="week-info">
+                    <span class="week-number">Week 1</span>
+                    <span class="week-dates">01-05 Dec</span>
+                </div>
+
+                <div class="weekly-stats">
+                    <div class="stat-item on-time">
+                        <div class="stat-value">5</div>
+                        <div class="stat-name">On-Time</div>
+                    </div>
+                    <div class="stat-item absent">
+                        <div class="stat-value">0</div>
+                        <div class="stat-name">Absent</div>
+                    </div>
+                    <div class="stat-item excused">
+                        <div class="stat-value">0</div>
+                        <div class="stat-name">Excused</div>
+                    </div>
+                    <div class="stat-item late">
+                        <div class="stat-value">0</div>
+                        <div class="stat-name">Late</div>
+                    </div>
+                </div>
+
+                <div class="attendance-records" id="attendanceRecords">
+                    <!-- Generated by JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="studentScript.js"></script>
+</body>
+</html>

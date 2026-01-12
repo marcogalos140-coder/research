@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ValmaTrack</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="background"></div>
+<div class="overlay"></div>
+
+<div class="content">
+  <div class="text-section">
+    <h1><span>VALMA</span>track</h1>
+    <p>ValmaTrack is an attendance tracking system powered by RFID technology. When a student scans their ID, the system instantly records attendance, notifies parents, and logs whether the student is on time or late.</p>
+    <p>This provides an efficient and reliable way to record the exact time of student arrivals. This system promotes security, accountability, and punctuality among students.</p>
+  </div>
+
+  <div class="card-container">
+    <button class="arrow-btn" id="arrow-btn" onclick="flipCard()">⮌</button>
+    <div class="card" id="auth-card">
+
+      <!-- LOGIN SIDE -->
+      <div class="card-face card-front">
+        <h2>Log In</h2>
+
+        <form id="loginForm">
+
+          <!-- DROPDOWN MENU -->
+          <select id="studentSelect" class="student-dropdown" required>
+            <option value="">Select Student</option>
+          </select>
+
+          <div style="display:flex;align-items:center;gap:10px;">
+            <input type="password" id="loginPassword" placeholder="Password" required>
+            <button type="button" id="passwordToggle" onclick="togglePasswordLogin()" style="cursor:pointer;background:none;border:none;font-size:1.2rem;">👁</button>
+          </div>
+
+          <button type="submit">LOGIN</button>
+          <div class="bubble-msg" id="login-bubble">Please fill all fields</div>
+        </form>
+      </div>
+
+      <!-- SIGNUP SIDE -->
+      <div class="card-face card-back">
+        <h2>Sign Up As</h2>
+        <div class="role-buttons">
+          <button class="student" onclick="signupRole('student')">Student</button>
+          <button class="parent" onclick="signupRole('parent')">Parent</button>
+          <button class="admin" onclick="signupRole('admin')">Admin</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<footer>
+  S.Y. 2025-2026 ValmaTrack | <a href="#">About Us</a> | <a href="#">Contact</a>
+</footer>
+
+<div class="overlay-popup" id="popup">
+  <div class="popup-box" id="popup-box"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
